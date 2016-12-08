@@ -478,7 +478,7 @@ HtmlWebpackPlugin.prototype.generateAssetTags = function (assets) {
       attributes: {
         href: stylePath,
         rel: 'stylesheet',
-        media : 'none'
+        media : 'none',
         type: 'text/css'
       }
     };
