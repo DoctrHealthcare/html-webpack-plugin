@@ -497,7 +497,7 @@ HtmlWebpackPlugin.prototype.generateAssetTags = function (assets) {
     });
   }
   // Add styles to the head
-  body = body.concat(styles);
+  head = head.concat(styles);
   // Add scripts to body or head
   if (this.options.inject === 'head') {
     head = head.concat(scripts);
