@@ -477,7 +477,8 @@ HtmlWebpackPlugin.prototype.generateAssetTags = function (assets) {
       selfClosingTag: selfClosingTag,
       attributes: {
         href: stylePath,
-        rel: 'preload',
+        rel: 'stylesheet',
+        media : 'none'
         type: 'text/css'
       }
     };
@@ -580,7 +581,7 @@ HtmlWebpackPlugin.prototype.createHtmlTag = function (tagDefinition) {
   });
   var extra = '';
   if(tagDefinition.tagName === 'link') {
-    extra = ' onload="this.rel=\'stylesheet\'" ';
+    extra = ' onload="this.media=\'all\'" ';
   }
 
   return '<' + [tagDefinition.tagName].concat(attributes).join(' ') + extra + (tagDefinition.selfClosingTag ? '/' : '') + '>' +
